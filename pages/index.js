@@ -50,6 +50,7 @@ export default () => (
 
       .root {
         max-width: 55rem;
+        padding-top: 2rem;
       }
 
       h2 {
