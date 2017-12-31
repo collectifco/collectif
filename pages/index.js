@@ -1,7 +1,8 @@
 import Head from '../components/head'
 import Roundel from '../components/roundel'
 import Bio from '../components/bio'
-import Contact from '../components/contact'
+import Sidebar from '../components/sidebar'
+import Footer from '../components/footer'
 import { vulfMonoLight, vulfMonoLightItalic } from '../components/fonts'
 
 export default () => (
@@ -11,9 +12,10 @@ export default () => (
       <Roundel />
       <section className='content'>
         <Bio />
-        <Contact />
+        <Sidebar />
       </section>
     </main>
+    <Footer />
     <style jsx global>{vulfMonoLight}</style>
     <style jsx global>{vulfMonoLightItalic}</style>
 
@@ -27,7 +29,6 @@ export default () => (
 
       html {
         height: 100%;
-        min-height: 100%;
         box-sizing: border-box;
       }
 
@@ -35,22 +36,22 @@ export default () => (
         background-color: $bg-color;
         color: #eee;
         font-family: "Vulf Mono Light", courier new, monospace;
+        margin: 0;
         padding: 2rem;
         font-size: 1.25rem;
         line-height: 1.6;
         height: 100%;
-        min-height: 100%;
         display: flex;
-        align-items: center;
         justify-content: center;
         @media (min-width: 768px) {
           padding: 4rem;
         }
       }
 
-      .root {
-        max-width: 55rem;
+      main {
+        max-width: 60rem;
         padding-top: 2rem;
+        overflow: hidden;
       }
 
       h2 {

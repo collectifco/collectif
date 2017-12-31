@@ -9,6 +9,10 @@ export default () => (
         animation: rotation 6s infinite linear;
       }
 
+      .roundel:hover {
+        animation: rotation 1s infinite linear;
+      }
+
       @keyframes rotation {
         from {
           transform: rotate(359deg);
