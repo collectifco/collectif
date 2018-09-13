@@ -1,7 +1,11 @@
 import Container from './container'
+import { Roundel } from './brandAssets'
 
 export default () => (
   <footer>
+    <Container>
+      <Roundel />
+    </Container>
     <Container>
       <div className='col col-1'>
         <h2>Contact</h2>
@@ -26,7 +30,7 @@ export default () => (
         }
       }
       small {
-        font-size: 0.65rem;
+        font-size: 0.75rem;
       }
     `}
     </style>
