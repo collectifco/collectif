@@ -1,5 +1,5 @@
-export default () => (
-  <div>
+export const Roundel = ({ color = '#333' }) => (
+  <span>
     <img src="/static/collectif-roundel.svg" alt="Collectif" className='roundel' />
     <style jsx>{`
       .roundel {
@@ -31,5 +31,17 @@ export default () => (
         }
       }
     `}</style>
-  </div>
+  </span>
+)
+
+export const Wordmark = ({ maxWidth = '120px', color = '#333' }) => (
+  <span>
+    <img src="/static/collectif-wordmark.svg" className='wordmark' />
+    <style jsx>{`
+      .wordmark {
+        max-width: ${maxWidth};
+        margin-bottom: 1rem;
+      }
+    `}</style>
+  </span>
 )
