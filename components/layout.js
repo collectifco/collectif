@@ -1,7 +1,6 @@
 import Head from './_head'
 import Footer from './footer'
 import Container from './container'
-import Link from 'next/link'
 import { Wordmark } from './brandAssets'
 import { vulfMono, vulfMonoItalic } from './fonts'
 
@@ -9,14 +8,18 @@ const Layout = ({ children }) => (
   <div className='root'>
     <Head />
     <header>
-      <Container>
-        <Wordmark />
-        {/* <nav>
-          <ul>
-            <li><Link href='/'><a>Work</a></Link></li>
-            <li><Link href='/studio'><a>Studio</a></Link></li>
-          </ul>
-        </nav> */}
+      <Container className='flex flex-v-align'>
+        <div className='nav-left'>
+          <Wordmark />
+        </div>
+        <div className='nav-right'>
+          <nav>
+            <ul>
+              <li><a href='#work'>Work</a></li>
+              <li><a href='#contact'>Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </Container>
     </header>
     <main>
@@ -100,6 +103,36 @@ const Layout = ({ children }) => (
         @media (min-width: 768px) {
           width: 32%;
           margin-top: 0;
+        }
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .flex-v-align {
+        align-items: center;
+      }
+
+    `}</style>
+    <style jsx>{`
+      .nav-left, .nav-right {
+        flex: 1 1 auto;
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          li {
+            display: inline-block;
+            margin-left: 1rem;
+          }
         }
       }
     `}</style>

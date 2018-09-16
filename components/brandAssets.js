@@ -35,13 +35,16 @@ export const Roundel = ({ color = '#333' }) => (
 )
 
 export const Wordmark = ({ maxWidth = '120px', color = '#333' }) => (
-  <span>
+  <div>
     <img src="/static/collectif-wordmark.svg" className='wordmark' />
     <style jsx>{`
+      div {
+        display: inline-block;
+      }
       .wordmark {
         max-width: ${maxWidth};
-        margin-bottom: 1rem;
+        width: ${maxWidth};
       }
     `}</style>
-  </span>
+  </div>
 )

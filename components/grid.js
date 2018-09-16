@@ -49,7 +49,7 @@ export default ({ children, items }) => (
         grid-row-end: span 3;
         grid-column-end: span 2;
 
-        @media screen and (min-width: 500px) {
+        @media screen and (min-width: 600px) {
           grid-column: auto;
           grid-row: auto;
         }
@@ -69,7 +69,7 @@ export default ({ children, items }) => (
         &__full {
           grid-row-end: span 3;
           grid-column-end: span 2;
-          @media screen and (min-width: 500px) {
+          @media screen and (min-width: 600px) {
             grid-column: 1/-1;
             grid-row-end: span 2;
           }

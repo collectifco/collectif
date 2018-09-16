@@ -78,7 +78,7 @@ export default () => (
       <p>We're an independent design &amp; development studio focused on finding clear and engaging solutions for companies looking to tell their story.</p>
       <p>Now booking for {getSeason()}.</p>
     </div>
-    <h2>Selected Works</h2>
+    <h2 id='work'>Selected Works</h2>
     <Grid
       items={items}
     />

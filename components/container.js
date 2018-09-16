@@ -1,5 +1,5 @@
-const Container = ({ children }) => (
-  <div className='container'>
+const Container = ({ children, className }) => (
+  <div className={ className ? `container ${className}`: 'container' }>
     { children }
     <style jsx>{`
       .container {
