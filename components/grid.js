@@ -109,7 +109,7 @@ const Caption = ({title, disciplines, align}) => (
 
       figcaption::before {
         content: '';
-        border-left: 3px solid #000eff;
+        border-left: 2px solid #000eff;
         width: 1px;
         height: 50px;
         position: absolute;
@@ -123,6 +123,7 @@ const Caption = ({title, disciplines, align}) => (
       .project-discipline {
         font-size: 0.825rem;
         font-family: 'Vulf Mono Italic', monospace;
+        color: #aaa;
         font-style: italic;
       }
     `}</style>

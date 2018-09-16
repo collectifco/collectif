@@ -39,29 +39,25 @@ const Layout = ({ children }) => (
       }
 
       body {
-        background-color: #fff;
-        color: #333;
+        background-color: #fefefe;
+        color: #292D2D;
         font-family: "Vulf Mono", courier new, monospace;
         margin: 0;
         padding: 2rem;
         font-size: 1rem;
+        font-weight: normal;
         line-height: 1.6;
         height: 100%;
         display: flex;
         justify-content: center;
         @media (min-width: 768px) {
-          padding: 4rem;
+          padding: 6rem 4rem 4rem;
         }
-      }
-
-      p {
-        font-weight: 100;
-        font-size: 0.875rem;
       }
 
       a {
         color: #005eff;
-        font-weight: bold;
+        /* font-weight: bold; */
         text-decoration: none;
         &:hover {
           background: #005eff;
@@ -71,9 +67,12 @@ const Layout = ({ children }) => (
 
       h2 {
         font-size: 1.25rem;
-        font-family: "Vulf Mono", courier new, monospace;
         margin-bottom: 2rem;
         line-height: 1;
+      }
+
+      img {
+        max-width: 100%;
       }
 
       .content {

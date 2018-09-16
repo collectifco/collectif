@@ -37,7 +37,7 @@ const items = [
     link: 'http://tripps.ca',
     position: 'bottom'
   }, {
-    image: '/static/img/whitecap_whit3cap.jpg',
+    image: '/static/img/whitecap_sunset.svg',
     title: 'Whitecap Coffee',
     disciplines: [ 'Branding', 'Web', 'Collateral' ],
     size: 'large',
@@ -55,6 +55,19 @@ const items = [
     disciplines: [ 'Web' ],
     size: 'medium',
     link: 'http://rhymeandrhythm.ca',
+    position: 'bottom'
+  }, {
+    image: '/static/img/thenewsprint_ipads.jpg',
+    title: 'The Newsprint',
+    disciplines: [ 'Web' ],
+    size: 'medium',
+    link: 'https://thenewsprint.co',
+    position: 'bottom'
+  }, {
+    image: '/static/img/whitecap_whit3cap.jpg',
+    title: 'Whitecap',
+    disciplines: [ 'Branding', 'Web', 'Collateral' ],
+    size: 'medium',
     position: 'bottom'
   }
 ]
