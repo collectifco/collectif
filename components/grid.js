@@ -10,7 +10,7 @@ export default ({ children, items }) => (
             <Caption title={item.title} disciplines={item.disciplines} align='top' />
           }
           <a href={item.link} target='_blank'>
-            <img src={item.image} />
+            <img src={item.image} alt={item.alt}/>
           </a>
           {item.position === 'bottom' &&
             <Caption title={item.title} disciplines={item.disciplines} align='bottom' />
@@ -109,7 +109,7 @@ const Caption = ({title, disciplines, align}) => (
 
       figcaption::before {
         content: '';
-        border-left: 2px solid #000eff;
+        border-left: 2px solid #ccc;
         width: 1px;
         height: 50px;
         position: absolute;

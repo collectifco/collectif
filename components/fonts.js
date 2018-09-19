@@ -23,3 +23,14 @@ export const vulfMono = css`
     font-weight: 400;
     font-style: normal;
   }`
+
+  export const calibreRegular = css`
+    @font-face {
+      font-family: 'Calibre';
+      src:    url('/static/webfonts/calibre-regular-webfont.eot');
+      src:    url('/static/webfonts/calibre-regular-webfont.eot?#iefix') format('embedded-opentype'),
+      url('/static/webfonts/calibre-regular-webfont.woff') format('woff'),
+      url('/static/webfonts/calibre-regular-webfont.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }`

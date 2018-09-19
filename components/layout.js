@@ -2,7 +2,7 @@ import Head from './_head'
 import Footer from './footer'
 import Container from './container'
 import { Wordmark } from './brandAssets'
-import { vulfMono, vulfMonoItalic } from './fonts'
+import { vulfMono, vulfMonoItalic, calibreRegular } from './fonts'
 
 const Layout = ({ children }) => (
   <div className='root'>
@@ -69,7 +69,9 @@ const Layout = ({ children }) => (
       }
 
       h2 {
-        font-size: 1.25rem;
+        font-family: calibre, sans-serif;
+        font-weight: normal;
+        font-size: 1.5rem;
         margin-bottom: 2rem;
         line-height: 1;
       }
@@ -124,6 +126,8 @@ const Layout = ({ children }) => (
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+        font-family: 'calibre', sans-serif;
+        font-size: 1.25rem;
 
         ul {
           list-style-type: none;
@@ -131,7 +135,7 @@ const Layout = ({ children }) => (
           padding: 0;
           li {
             display: inline-block;
-            margin-left: 1rem;
+            margin-left: 2rem;
           }
         }
       }
