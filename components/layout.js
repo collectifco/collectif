@@ -126,8 +126,7 @@ const Layout = ({ children }) => (
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        font-family: 'calibre', sans-serif;
-        font-size: 1.25rem;
+        font-family: "Vulf Mono", courier new, monospace;
 
         ul {
           list-style-type: none;
