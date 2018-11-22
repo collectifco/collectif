@@ -1,15 +1,48 @@
-export const Roundel = ({ color = '#333' }) => (
+import SVGInline from 'react-svg-inline';
+
+export const Roundel = ({ colorLight = '#333', colorDark }) => (
   <span>
-    <img src="/static/collectif-roundel.svg" alt="Collectif" className='roundel' />
-    <style jsx>{`
+    <SVGInline
+      className='roundel'
+      component='div'
+      svg={`<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 1500" xml:space="preserve">
+      <defs><style>.st0 { fill: ${colorLight}; } @media (prefers-color-scheme: dark) { .st0 { fill: ${colorDark}}}</style></defs>
+    <g>
+      <path class="st0" d="M587.2,1288.2c-41.7-12.2-60.2-44.2-56.4-81.6l36.6,10.7c1.3,17.9,9.1,32,29.5,38c28.2,8.3,52.2-11.6,62-45.3
+        c9.8-33.4,0.4-63.3-27.8-71.6c-20.4-6-34.6,1.7-45.4,16.4l-36.6-10.7c17.1-33.8,49.9-50.7,91.6-38.5
+        c47.2,13.8,71.4,61.3,55.6,115.4C680.4,1275.2,634.4,1302.1,587.2,1288.2z"/>
+      <path class="st0" d="M436.9,951c27.7,43.2,13.2,94.9-33,124.6c-46.4,29.8-99.3,21.3-127-21.8c-27.7-43.2-13.6-95,32.9-124.8
+        C355.9,899.2,409.2,907.8,436.9,951z M305.6,1035.3c15.7,24.5,46.9,26.9,77.2,7.5c30.3-19.5,41-48.8,25.3-73.3
+        c-15.9-24.7-47.2-27.4-77.5-8C300.3,980.9,289.8,1010.5,305.6,1035.3z"/>
+      <path class="st0" d="M187.8,745.3l4.3-38.2l149.4,16.7l9.6-85.3l33.7,3.8l-13.8,123.4L187.8,745.3z"/>
+      <path class="st0" d="M300.4,412.4l26.1-28.1l110.2,102.3l58.4-62.9l24.8,23.1l-84.5,91L300.4,412.4z"/>
+      <path class="st0" d="M712.1,188.2l6.1,33l-85.8,15.9l7.3,39.5l77.9-14.4l6,32.2l-77.9,14.4l8,43.1l85.8-15.9l6.2,33.3l-123,22.8
+        L589.1,211L712.1,188.2z"/>
+      <path class="st0" d="M1017.4,255.4c38.4,20.4,50.1,55.4,38.8,91.3l-33.7-17.9c2.3-17.8-2.4-33.2-21.2-43.2
+        c-26-13.8-53.4,0.8-69.9,31.8c-16.3,30.7-13.2,61.9,12.8,75.7c18.8,10,34.2,5.3,47.8-6.9l33.7,17.9c-23.5,29.6-59.1,39.6-97.5,19.2
+        c-43.5-23.1-57.6-74.4-31.2-124.2S974,232.3,1017.4,255.4z"/>
+      <path class="st0" d="M1233.7,458.6l61.7,144.6l-30.9,13.2l-23.3-54.6l-138.5,59.1l-15.2-35.6l138.5-59.1l-23.2-54.4L1233.7,458.6z"
+        />
+      <path class="st0" d="M1116.9,830.4l6.2-37.9l181.8,29.9l-6.2,37.9L1116.9,830.4z"/>
+      <path class="st0" d="M1073,949.1l140.3,119.4l-79.5,93.5l-25.6-21.8l54.8-64.4l-35.6-30.3l-50.7,59.6l-25.4-21.6l50.7-59.6
+        l-53.7-45.7L1073,949.1z"/>
+      <path class="st0" d="M922.3,1188.3l-114.9,29.1l-6.6-26.2l114.9-29.1L922.3,1188.3z"/>
+    </g>
+    </svg>`}
+    />
+    <style jsx global>{`
       .roundel {
+        display: block;
+        width: 100%;
+      }
+      .roundel-svg {
         width: 50%;
         margin-left: -0.5rem;
         max-width: 5rem;
         animation: rotation 6s infinite linear;
       }
 
-      .roundel:hover {
+      .roundel-svg:hover {
         animation: rotation 1s infinite linear;
       }
 
@@ -32,19 +65,25 @@ export const Roundel = ({ color = '#333' }) => (
       }
     `}</style>
   </span>
-)
+);
 
-export const Wordmark = ({ maxWidth = '120px', color = '#333' }) => (
-  <div>
-    <img src="/static/collectif-wordmark.svg" className='wordmark' />
-    <style jsx>{`
-      div {
-        display: inline-block;
-      }
-      .wordmark {
+export const Wordmark = ({
+  maxWidth = '120px',
+  colorLight = '#333',
+  colorDark
+}) => (
+  <span>
+    <SVGInline
+      className='wordmark'
+      component='div'
+      svg={`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 187.76 40"><defs><style>.cls-1 { fill: ${colorLight}; } @media (prefers-color-scheme: dark) { .cls-1 { fill: ${colorDark}}}</style></defs><title>collectif-wordmark</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M16.66,2.15c8.3,0,13.55,4.78,14.92,12.12H25.49c-1.43-3.88-3.94-6.51-8.83-6.51-6.45,0-10.39,5.61-10.39,13.31s3.88,13.32,10.39,13.32c4.89,0,7.4-2.63,8.83-6.57h6.09C30.21,35.22,24.9,40,16.66,40,7.22,40,0,32.36,0,21.07S7.22,2.15,16.66,2.15Z"/><path class="cls-1" d="M47,40c-7.46,0-12.59-5.73-12.59-13.85S39.58,12.3,47,12.3,59.64,18,59.64,26.15,54.51,40,47,40Zm0-22.57c-4.29,0-6.62,3.7-6.62,8.72s2.33,8.72,6.62,8.72,6.63-3.71,6.63-8.72S51.34,17.43,47,17.43Z"/><path class="cls-1" d="M70,39.4H64V.6h6Z"/><path class="cls-1" d="M81,39.4H75V.6h6Z"/><path class="cls-1" d="M109,31.16c-.89,5.26-4.77,8.84-11.16,8.84-7.4,0-12.54-5.61-12.54-13.79,0-7.94,5.2-13.91,12.42-13.91,7.46,0,11.52,5.31,11.52,13.07v2.15H91.16C91.34,32.18,94,35,97.85,35c2.87,0,5-1.26,5.67-3.83Zm-17.67-8h12c-.06-3.22-1.91-5.85-5.55-5.85C94.51,17.31,92.06,19.34,91.34,23.16Z"/><path class="cls-1" d="M125.43,12.3c6.33,0,10.33,3.58,11.11,8.89h-6c-.48-2.38-2.45-3.7-5.08-3.7-4,0-6.45,3.64-6.45,8.66s2.45,8.66,6.45,8.66c2.63,0,4.6-1.32,5.08-3.71h6c-.78,5.32-4.78,8.9-11.11,8.9-7.16,0-12.36-5.61-12.36-13.85S118.27,12.3,125.43,12.3Z"/><path class="cls-1" d="M142.33,17.85h-4.18v-5h4.18V5.79h6V12.9h6v5h-6V31.58c0,2.15,1.19,3.11,3.16,3.11a6.32,6.32,0,0,0,3.4-1.08V39a9.16,9.16,0,0,1-4.47,1c-4.72,0-8.06-2.51-8.06-7.76Z"/><path class="cls-1" d="M162.75,8.54A3.71,3.71,0,0,1,159,4.9a3.71,3.71,0,0,1,7.41,0A3.7,3.7,0,0,1,162.75,8.54Zm3,30.86h-6V12.9h6Z"/><path class="cls-1" d="M187.76,6a5.32,5.32,0,0,0-2.92-.84c-2.39,0-3.89,1.44-3.89,4.06V12.9h5.8v5H181V39.4H175.1V17.85h-4.59v-5h4.59V8.78c0-5.68,3.76-8.78,8.72-8.78a9.06,9.06,0,0,1,3.94.72Z"/></g></g></svg>`}
+    />
+    <style jsx global>{`
+      .wordmark-svg, .wordmark {
         max-width: ${maxWidth};
         width: ${maxWidth};
+        display: inline-block;
       }
     `}</style>
-  </div>
-)
+  </span>
+);

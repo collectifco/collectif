@@ -4,7 +4,7 @@ import { Roundel } from './brandAssets'
 export default () => (
   <footer>
     <Container>
-      <Roundel />
+      <Roundel colorDark='#fefefe' colorLight='#333' />
     </Container>
     <Container>
       <div className='col col-1'>

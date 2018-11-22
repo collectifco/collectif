@@ -10,7 +10,7 @@ const Layout = ({ children }) => (
     <header>
       <Container className='flex flex-v-align'>
         <div className='nav-left'>
-          <Wordmark />
+          <Wordmark colorDark='#fefefe' colorLight='#333' />
         </div>
         <div className='nav-right'>
           <nav>

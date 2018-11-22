@@ -6,6 +6,7 @@ const Container = ({ children, className }) => (
         max-width: 75rem;
         margin: 0 auto;
         padding: 0 0.5rem;
+        overflow: hidden;
       }
     `}</style>
   </div>
