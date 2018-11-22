@@ -56,6 +56,10 @@ const Layout = ({ children }) => (
         @media (min-width: 768px) {
           padding: 6rem 4rem 4rem;
         }
+        @media (prefers-color-scheme: dark) {
+          background-color: mix(#000, #292D2D, 50%);
+          color: #fefefe;
+        }
       }
 
       a {
@@ -65,6 +69,9 @@ const Layout = ({ children }) => (
         &:hover {
           background: #005eff;
           color: #fff;
+        }
+        @media (prefers-color-scheme: dark) {
+          color: mix(#fff, #005eff, 25%);
         }
       }
 
