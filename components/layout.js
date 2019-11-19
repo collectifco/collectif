@@ -2,7 +2,7 @@ import Head from './_head'
 import Footer from './footer'
 import Container from './container'
 import { Wordmark } from './brandAssets'
-import { vulfMono, vulfMonoItalic, calibreRegular } from './fonts'
+import { vulfMono, vulfMonoItalic } from './fonts'
 
 const Layout = ({ children }) => (
   <div className='root'>
@@ -15,8 +15,12 @@ const Layout = ({ children }) => (
         <div className='nav-right'>
           <nav>
             <ul>
-              <li><a href='#work'>Work</a></li>
-              <li><a href='#contact'>Contact</a></li>
+              <li>
+                <a href='#work'>Work</a>
+              </li>
+              <li>
+                <a href='#contact'>Contact</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -25,12 +29,16 @@ const Layout = ({ children }) => (
     <main>
       <Container>
         {/* Content goes here */}
-        { children }
+        {children}
       </Container>
     </main>
     <Footer />
-    <style jsx global>{vulfMono}</style>
-    <style jsx global>{vulfMonoItalic}</style>
+    <style jsx global>
+      {vulfMono}
+    </style>
+    <style jsx global>
+      {vulfMonoItalic}
+    </style>
     <style jsx global>{`
       * {
         box-sizing: border-box;
@@ -43,8 +51,8 @@ const Layout = ({ children }) => (
 
       body {
         background-color: #fefefe;
-        color: #292D2D;
-        font-family: "Vulf Mono", courier new, monospace;
+        color: #292d2d;
+        font-family: 'Vulf Mono', courier new, monospace;
         margin: 0;
         padding: 2rem;
         font-size: 1rem;
@@ -57,7 +65,7 @@ const Layout = ({ children }) => (
           padding: 6rem 4rem 4rem;
         }
         @media (prefers-color-scheme: dark) {
-          background-color: mix(#000, #292D2D, 50%);
+          background-color: mix(#000, #292d2d, 50%);
           color: #fefefe;
         }
       }
@@ -122,10 +130,10 @@ const Layout = ({ children }) => (
       .flex-v-align {
         align-items: center;
       }
-
     `}</style>
     <style jsx>{`
-      .nav-left, .nav-right {
+      .nav-left,
+      .nav-right {
         flex: 1 1 auto;
       }
 
@@ -133,7 +141,7 @@ const Layout = ({ children }) => (
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        font-family: "Vulf Mono", courier new, monospace;
+        font-family: 'Vulf Mono', courier new, monospace;
 
         ul {
           list-style-type: none;

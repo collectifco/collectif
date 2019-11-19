@@ -6,92 +6,102 @@ const items = [
     image: '/static/img/tcfp_logo-green.svg',
     alt: 'TC Forest Products Logo',
     title: 'TC Forest Products',
-    disciplines: [ 'Branding', 'Web' ],
+    disciplines: ['Branding', 'Web'],
     size: 'medium',
     link: 'http://tcforest.ca',
-    position: 'bottom'
-  }, {
+    position: 'bottom',
+  },
+  {
     image: '/static/img/whitecap_tea.jpg',
     alt: 'Whitecap Tea Menus',
     title: 'Whitecap Coffee',
-    disciplines: [ 'Branding', 'Web', 'Development', 'Collateral' ],
+    disciplines: ['Branding', 'Web', 'Development', 'Collateral'],
     size: 'wide',
     link: 'http://drinkwhitecap.ca',
-    position: 'top'
-  }, {
+    position: 'top',
+  },
+  {
     image: '/static/img/mbhof_thumb.jpg',
     alt: 'Manitoba Baseball Hall of Fame Logo',
     title: 'Manitoba Baseball Hall of Fame',
-    disciplines: [ 'Branding', 'Web' ],
+    disciplines: ['Branding', 'Web'],
     size: 'full',
     link: 'http://mbhof.ca',
-    position: 'top'
-  }, {
+    position: 'top',
+  },
+  {
     image: '/static/img/whatevertown.svg',
     alt: 'Whatevertown Logo',
     title: 'Whatevertown',
-    disciplines: [ 'Branding' ],
+    disciplines: ['Branding'],
     size: 'medium',
-    position: 'top'
-  }, {
+    position: 'top',
+  },
+  {
     image: '/static/img/tripps_icon.svg',
-    alt: 'Tripp\'s Tree Care logo',
-    title: 'Tripp\'s Tree Care',
-    disciplines: [ 'Branding', 'Web', 'Collateral' ],
+    alt: "Tripp's Tree Care logo",
+    title: "Tripp's Tree Care",
+    disciplines: ['Branding', 'Web', 'Collateral'],
     size: 'large',
     link: 'http://tripps.ca',
-    position: 'bottom'
-  }, {
+    position: 'bottom',
+  },
+  {
     image: '/static/img/whitecap_sunset.svg',
     alt: 'Whitecap logo',
     title: 'Whitecap Coffee',
-    disciplines: [ 'Branding', 'Web', 'Collateral' ],
+    disciplines: ['Branding', 'Web', 'Collateral'],
     size: 'large',
     link: 'http://drinkwhitecap.com',
-    position: 'top'
-  }, {
+    position: 'top',
+  },
+  {
     image: '/static/img/lc-dribbble.jpg',
-    title: 'Listener\'s Club',
-    alt: 'Listener\'s Club logo',
-    disciplines: [ 'Branding' ],
+    title: "Listener's Club",
+    alt: "Listener's Club logo",
+    disciplines: ['Branding'],
     size: 'medium',
-    position: 'bottom'
-  }, {
+    position: 'bottom',
+  },
+  {
     image: '/static/img/rhymeandrhythm_screenshot.png',
     title: 'Rhyme & Rhythm Cinematography',
     alt: 'Website screenshot',
-    disciplines: [ 'Web' ],
+    disciplines: ['Web'],
     size: 'medium',
     link: 'http://rhymeandrhythm.ca',
-    position: 'bottom'
-  }, {
+    position: 'bottom',
+  },
+  {
     image: '/static/img/thenewsprint_ipads.jpg',
     alt: 'thenewsprint.co on ipads',
     title: 'The Newsprint',
-    disciplines: [ 'Web' ],
+    disciplines: ['Web'],
     size: 'medium',
     link: 'https://thenewsprint.co',
-    position: 'bottom'
-  }, {
+    position: 'bottom',
+  },
+  {
     image: '/static/img/whitecap_whit3cap.jpg',
     alt: 'Whitecap 3rd anniversary logos',
     title: 'Whitecap',
-    disciplines: [ 'Branding', 'Web', 'Collateral' ],
+    disciplines: ['Branding', 'Web', 'Collateral'],
     size: 'medium',
-    position: 'bottom'
-  }
+    position: 'bottom',
+  },
 ]
 
 export default () => (
   <Layout>
     <div className='intro'>
-      <p>We're an independent design &amp; development studio focused on finding clear and engaging solutions for companies looking to tell their story.</p>
+      <p>
+        We're an independent design &amp; development studio focused on finding clear and engaging solutions for
+        companies looking to tell their story.
+      </p>
       <p>Now booking for {getSeason()}.</p>
     </div>
     <h2 id='work'>Selected Works</h2>
-    <Grid
-      items={items}
-    />
+    <Grid items={items} />
     <style jsx>{`
       .intro {
         padding: 3rem 0 3rem;

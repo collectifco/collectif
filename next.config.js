@@ -1,7 +1,3 @@
 module.exports = {
-  exportPathMap: () => {
-    return {
-      '/': { page: '/' }
-    }
-  },
+  target: 'serverless',
 }

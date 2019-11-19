@@ -1,6 +1,6 @@
 const Container = ({ children, className }) => (
-  <div className={ className ? `container ${className}`: 'container' }>
-    { children }
+  <div className={className ? `container ${className}` : 'container'}>
+    {children}
     <style jsx>{`
       .container {
         max-width: 75rem;

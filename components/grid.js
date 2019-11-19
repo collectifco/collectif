@@ -1,101 +1,97 @@
-export default ({ children, items }) => (
+export default ({ items }) => (
   <div className='grid-wrapper'>
     <div className='unsupported'>
       <p>Sorry, your browser is currently unsupported by some experimental features we're using.</p>
     </div>
     <div className='grid'>
-      { items.map((item, i) => (
+      {items.map((item, i) => (
         <figure className={`item item__${item.size}`} key={i}>
-          {item.position === 'top' &&
-            <Caption title={item.title} disciplines={item.disciplines} align='top' />
-          }
-          <a href={item.link} target='_blank'>
-            <img src={item.image} alt={item.alt}/>
+          {item.position === 'top' && <Caption title={item.title} disciplines={item.disciplines} align='top' />}
+          <a href={item.link} target='_blank' rel='noopener noreferrer'>
+            <img src={item.image} alt={item.alt} />
           </a>
-          {item.position === 'bottom' &&
-            <Caption title={item.title} disciplines={item.disciplines} align='bottom' />
-          }
+          {item.position === 'bottom' && <Caption title={item.title} disciplines={item.disciplines} align='bottom' />}
         </figure>
       ))}
     </div>
-    <style jsx>{`
-      .grid-wrapper {
-        margin-bottom: 10rem;
-        @supports(display: grid) {
-          display: block
-        }
-      }
-
-      .unsupported {
-        display: block;
-        @supports(display: grid) {
-          display: none;
-        }
-      }
-
-      .grid {
-        display: grid;
-        grid-gap: 25px;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-auto-rows: auto;
-        grid-auto-flow: row dense;
-      }
-
-      .item {
-        margin: 0;
-        grid-column-start: auto;
-        grid-row-start: auto;
-        grid-column: 1/-1;
-        grid-row-end: span 3;
-        grid-column-end: span 2;
-
-        @media screen and (min-width: 600px) {
-          grid-column: auto;
-          grid-row: auto;
-        }
-
-        &__wide {
-          grid-column-end: span 2;
-        }
-
-        &__medium {
-          grid-row-end: span 2;
-        }
-
-        &__large {
-          grid-row-end: span 3;
-        }
-
-        &__full {
-          grid-row-end: span 3;
-          grid-column-end: span 2;
-          @media screen and (min-width: 600px) {
-            grid-column: 1/-1;
-            grid-row-end: span 2;
+    <style jsx>
+      {`
+        .grid-wrapper {
+          margin-bottom: 10rem;
+          @supports (display: grid) {
+            display: block;
           }
         }
 
-        img {
+        .unsupported {
           display: block;
-          width: 100%;
-          object-fit: cover;
+          @supports (display: grid) {
+            display: none;
+          }
         }
 
-      }
-
-      .item a {
-        margin: 0;
-        padding: 0;
-        &:hover {
-          background: none;
+        .grid {
+          display: grid;
+          grid-gap: 25px;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-auto-rows: auto;
+          grid-auto-flow: row dense;
         }
-      }
-    `}
-      </style>
-    </div>
+
+        .item {
+          margin: 0;
+          grid-column-start: auto;
+          grid-row-start: auto;
+          grid-column: 1/-1;
+          grid-row-end: span 3;
+          grid-column-end: span 2;
+
+          @media screen and (min-width: 600px) {
+            grid-column: auto;
+            grid-row: auto;
+          }
+
+          &__wide {
+            grid-column-end: span 2;
+          }
+
+          &__medium {
+            grid-row-end: span 2;
+          }
+
+          &__large {
+            grid-row-end: span 3;
+          }
+
+          &__full {
+            grid-row-end: span 3;
+            grid-column-end: span 2;
+            @media screen and (min-width: 600px) {
+              grid-column: 1/-1;
+              grid-row-end: span 2;
+            }
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .item a {
+          margin: 0;
+          padding: 0;
+          &:hover {
+            background: none;
+          }
+        }
+      `}
+    </style>
+  </div>
 )
 
-const Caption = ({title, disciplines, align}) => (
+const Caption = ({ title, disciplines, align }) => (
   <figcaption>
     <span className='project-title'>{title}</span>
     <span className='project-discipline'>{disciplines.join(', ')}</span>
@@ -113,7 +109,7 @@ const Caption = ({title, disciplines, align}) => (
         width: 1px;
         height: 50px;
         position: absolute;
-        top: ${(align === 'bottom' ? '-25px' : '50px')};
+        top: ${align === 'bottom' ? '-25px' : '50px'};
         left: 25px;
       }
       .project-title {
